@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: KptFile
+metadata:
+    name: foo-corp
+upstream:
+    type: git
+    git:
+        commit: 39f1ed8be147a5acd0fb60b0662656ae387cfc44
+        repo: https://github.com/frankfarzan/foo-corp-configs
+        directory: /
+        ref: master
