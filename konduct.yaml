@@ -1,3 +1,5 @@
 apiVersion: 'gcr.io/konduct/validate-rolebinding:kpt-demo3'
 kind: FunctionConfig
+metadata:
+  name: config
 subject_name: bob@foo-corp.com
