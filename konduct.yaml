@@ -1,5 +1,6 @@
-apiVersion: 'gcr.io/konduct/validate-rolebinding:kpt-demo3'
-kind: FunctionConfig
+apiVersion: 'gcr.io/konduct/validate-rolebinding:demo'
+kind: ConfigMap
 metadata:
   name: config
-subject_name: bob@foo-corp.com
+data:
+  subject_name: bob@foo-corp.com
