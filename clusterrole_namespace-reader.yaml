@@ -6,7 +6,7 @@ rules:
 - resources:
   - namespaces
   apiGroups:
-  - ""
+  - ''
   verbs:
   - get
   - watch

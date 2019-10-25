@@ -6,6 +6,6 @@ rules:
 - resources:
   - pods
   apiGroups:
-  - ""
+  - ''
   verbs:
   - '*'

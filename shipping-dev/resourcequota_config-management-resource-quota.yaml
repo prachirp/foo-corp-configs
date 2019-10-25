@@ -9,4 +9,4 @@ spec:
   hard:
     cpu: 100m
     memory: 100Mi
-    pods: "1"
+    pods: '1'
