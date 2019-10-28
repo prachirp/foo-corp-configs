@@ -51,3 +51,11 @@ items:
       namespace: default
     data:
       public_key: no secrets here
+  - apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      clustername: abcd
+      name: super-secret
+      namespace: default
+    data:
+      private_key: secrets here
