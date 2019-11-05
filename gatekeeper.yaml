@@ -46,7 +46,6 @@ items:
   - apiVersion: v1
     kind: ConfigMap
     metadata:
-      clustername: abcd
       name: super-secret
       namespace: default
     data:
@@ -54,7 +53,6 @@ items:
   - apiVersion: v1
     kind: ConfigMap
     metadata:
-      clustername: abcd
       name: super-secret
       namespace: default
     data:
