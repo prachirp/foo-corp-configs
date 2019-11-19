@@ -1,4 +1,4 @@
-apiVersion: 'gcr.io/konduct/validate-rolebinding:demo'
+apiVersion: 'gcr.io/kpt-functions/validate-rolebinding:demo'
 kind: ConfigMap
 metadata:
   name: config
