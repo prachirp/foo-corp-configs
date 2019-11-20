@@ -1,0 +1,20 @@
+steps:
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['config', 'current-context']
+  volumes:
+  - name: 'kube'
+    path: '/kube'
+  env:
+  - 'KUBECONFIG=/kube/config'
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=foo-corp-configs-cluster'
+  - 'CLOUDSDK_CONTAINER_USE_APPLICATION_DEFAULT_CREDENTIALS=true'
+- name: 'bash'
+  args: ['chmod', '444', '/kube/config']
+  volumes:
+  - name: 'kube'
+    path: '/kube'
+- name: 'gcr.io/kpt-functions/source-yaml-dir:demo'
+  args: ['--input', '/dev/null', '--source_dir', '/workspace/', '--output', '/workspace/config-source.yaml']
+- name: 'gcr.io/kpt-functions/gatekeeper-validate:demo'
+  args: ['--input', '/workspace/config-source.yaml', '--output', '/workspace/config-validated.yaml']
