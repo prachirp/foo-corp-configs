@@ -1,14 +1,4 @@
 steps:
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: ['config', 'current-context']
-  volumes:
-  - name: 'kube'
-    path: '/kube'
-  env:
-  - 'KUBECONFIG=/kube/config'
-  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=foo-corp-configs-cluster'
-  - 'CLOUDSDK_CONTAINER_USE_APPLICATION_DEFAULT_CREDENTIALS=true'
 - name: 'bash'
   args: ['chmod', '755', '/workspace']
 - name: 'gcr.io/kpt-functions/source-yaml-dir:demo'
