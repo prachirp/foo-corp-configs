@@ -15,6 +15,6 @@ steps:
   - name: 'kube'
     path: '/kube'
 - name: 'gcr.io/kpt-functions/source-yaml-dir:demo'
-  args: ['--input', '/dev/null', '--source_dir', '/workspace/', '--output', '/workspace/config-source.yaml']
+  args: ['--input', '/dev/null', '--source_dir', '/workspace/acm-pipeline', '--output', '/workspace/config-source.yaml']
 - name: 'gcr.io/kpt-functions/gatekeeper-validate:demo'
   args: ['--input', '/workspace/config-source.yaml', '--output', '/workspace/config-validated.yaml']
